@@ -11,8 +11,8 @@ using namespace std;
 
 class PrintDate {
 public:
-    PrintDate(Calendar &calendar, std::shared_ptr<Printer> printer) {
-        this->calendar = &calendar;
+    PrintDate(Calendar *calendar, Printer *printer) {
+        this->calendar = calendar;
         this->printer = printer;
     }
 
@@ -24,7 +24,7 @@ public:
 
 private:
     Calendar *calendar;
-    std::shared_ptr<Printer> printer;
+    Printer *printer;
 };
 
 #endif //LEGACY_TRAINING_CPP_PRINTDATE_H
