@@ -7,5 +7,4 @@ include_directories(.)
 
 add_executable(print_date
         Main.cpp
-        PrintDate.cpp
-        PrintDate.h)
+        )
