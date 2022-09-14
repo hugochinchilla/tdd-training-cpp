@@ -82,8 +82,8 @@ FizzBuzz : FizzBuzzTest.o FizzBuzz.o gtest.a gtest_main.a
 	./FizzBuzz
 
 docker-build:
-	docker build . -t gcc-googletest
+	docker build . -t codiumteam/tdd-training-cpp
 docker-run:
-	docker run -v $${PWD}:/opt/project -w /opt/project gcc-googletest
+	docker run -v $${PWD}:/codium codiumteam/tdd-training-cpp
 docker-windows-run:
-	docker run -v %cd%:/opt/project -w /opt/project gcc-googletest
+	docker run -v %cd%:/codium codiumteam/tdd-training-cpp
