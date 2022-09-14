@@ -2,8 +2,9 @@
 #define TDD_TRAINING_CPP_FIZZBUZZ_H
 
 
-class FizzBuzz {
-
+class RomanNumerals {
+public:
+    RomanNumerals();
 };
 
 
