@@ -1,4 +1,4 @@
 #!/bin/bash
-make
+make all
 ./RomanNumerals
 make clean
