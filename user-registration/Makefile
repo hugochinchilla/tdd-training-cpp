@@ -1,3 +1,5 @@
+default: docker-run
+
 docker-build:
 	docker build . -t codiumteam/tdd-training-cpp:user-registration
 docker-run:

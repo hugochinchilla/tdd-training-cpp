@@ -1,3 +1,5 @@
+default: docker-run
+
 # Makefile for building the kata file with the Google Testing Framework
 #
 # SYNOPSIS:
