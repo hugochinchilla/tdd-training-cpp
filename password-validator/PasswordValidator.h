@@ -2,7 +2,9 @@
 #define TDD_TRAINING_CPP_FIZZBUZZ_H
 
 
-class FizzBuzz {
+class PasswordValidator {
+public:
+    PasswordValidator();
 
 };
 
