@@ -11,16 +11,8 @@ using namespace std;
 
 class PrintDate {
 public:
-    PrintDate(Calendar *calendar, Printer *printer) {
-        this->calendar = calendar;
-        this->printer = printer;
-    }
-
-    void printCurrentDate(){
-        time_t now = this->calendar->today();
-        char *timeNow = ctime(&now);
-        this->printer->printLine(timeNow);
-    }
+    PrintDate(Calendar *calendar, Printer *printer);
+    void printCurrentDate();
 
 private:
     Calendar *calendar;

@@ -88,5 +88,5 @@ on **Windows**
         EXPECT_TRUE(succeed);
     }
 
-# Credits
-Project setup based on : https://github.com/davidstutz/googlemock-example
+# Author
+Codium [@codiumteam](https://www.twitter.com/codiumteam)
