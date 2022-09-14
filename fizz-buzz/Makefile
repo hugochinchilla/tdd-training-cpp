@@ -12,7 +12,7 @@
 
 # Points to the root of Google Test, relative to where this file is.
 # Remember to tweak this if you move this file.
-GTEST_DIR = /gtest/googletest
+GTEST_DIR = build/gtest/googletest
 
 # Where to find user code.
 USER_DIR = .
@@ -45,6 +45,11 @@ clean :
 # trailing _.
 GTEST_SRCS_ = $(GTEST_DIR)/src/*.cc $(GTEST_DIR)/src/*.h $(GTEST_HEADERS)
 
+.PHONY:build-deps
+build-deps:
+	git clone --branch=release-1.8.1 https://github.com/google/googletest build/gtest
+	cd build/gtest/googletest/make && make
+
 # For simplicity and to avoid depending on Google Test's
 # implementation details, the dependencies specified below are
 # conservative and not optimized.  This is fine as Google Test
@@ -69,16 +74,16 @@ gtest_main.a : gtest-all.o gtest_main.o
 FizzBuzz.o : $(USER_DIR)/FizzBuzz.cpp
 	$(CXX) -c $^
 
-FizzBuzzTest.o : $(USER_DIR)/FizzBuzzTest.cc \
-  $(GTEST_HEADERS)
+FizzBuzzTest.o : $(USER_DIR)/FizzBuzzTest.cc $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/FizzBuzzTest.cc
 
 FizzBuzz : FizzBuzzTest.o FizzBuzz.o gtest.a gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -pthread $^ -o $@
+	./FizzBuzz
 
 docker-build:
 	docker build . -t gcc-googletest
 docker-run:
-	docker run -v $${PWD}:/opt/project -w /opt/project gcc-googletest ./run-once.sh
+	docker run -v $${PWD}:/opt/project -w /opt/project gcc-googletest
 docker-windows-run:
-	docker run -v %cd%:/opt/project -w /opt/project gcc-googletest ./run-once.sh
+	docker run -v %cd%:/opt/project -w /opt/project gcc-googletest
