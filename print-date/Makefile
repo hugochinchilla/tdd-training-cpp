@@ -1,5 +1,5 @@
 docker-build:
-	docker build . -t gcc-googletest
+	docker build . -t codiumteam/tdd-training-cpp:print-date
 
 docker-run:
-	docker run -v ${PWD}:/opt/project -w /opt/project gcc-googletest ./run-once.sh
+	docker run -v ${PWD}:/opt/project -w /opt/project codiumteam/tdd-training-cpp:print-date ./run-once.sh

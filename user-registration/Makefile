@@ -1,6 +1,6 @@
 docker-build:
-	docker build . -t gcc-googletest
+	docker build . -t codiumteam/tdd-training-cpp:user-registration
 docker-run:
-	docker run -v ${PWD}:/opt/project -w /opt/project gcc-googletest ./run-once.sh
+	docker run -v ${PWD}:/opt/project -w /opt/project codiumteam/tdd-training-cpp:user-registration ./run-once.sh
 docker-windows-run:
-	docker run -v %cd%:/opt/project -w /opt/project gcc-googletest ./run-once.sh
+	docker run -v %cd%:/opt/project -w /opt/project codiumteam/tdd-training-cpp:user-registration ./run-once.sh

@@ -77,8 +77,8 @@ RomanNumerals : RomanNumeralsTest.o RomanNumerals.o gtest.a gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -pthread $^ -o $@
 
 docker-build:
-	docker build . -t gcc-googletest
+	docker build . -t codiumteam/tdd-training-cpp:roman-numerals
 docker-run:
-	docker run -v ${PWD}:/opt/project -w /opt/project gcc-googletest ./run-once.sh
+	docker run -v ${PWD}:/opt/project -w /opt/project codiumteam/tdd-training-cpp:roman-numerals ./run-once.sh
 docker-windows-run:
-	docker run -v %cd%:/opt/project -w /opt/project gcc-googletest ./run-once.sh
+	docker run -v %cd%:/opt/project -w /opt/project codiumteam/tdd-training-cpp:roman-numerals ./run-once.sh
