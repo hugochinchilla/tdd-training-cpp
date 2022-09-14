@@ -3,7 +3,8 @@
 
 
 class FizzBuzz {
-
+public:
+    FizzBuzz();
 };
 
 
