@@ -40,11 +40,12 @@ function validateDocker() {
 
 validateDocker
 
-validateKata "run fizz-buzz kata" "cd fizz-buzz" "make docker-run"
-validateKata "run roman-numerals" "cd roman-numerals" "make docker-run"
-validateKata "run password validator" "cd password-validator" "make docker-run"
-validateKata "run user registration" "cd user-registration" "make docker-run"
-#validateKata "run coffee machine" "cd cofee-machine" "make docker-run"
+validateKata "run fizz-buzz kata" "cd fizz-buzz" "make"
+validateKata "run roman-numerals" "cd roman-numerals" "make"
+validateKata "run password validator" "cd password-validator" "make"
+validateKata "run print date" "cd print-date" "make"
+validateKata "run user registration" "cd user-registration" "make"
+validateKata "run coffee machine" "cd coffee-machine" "make"
 
 if [ -z "$ERROR" ]; then
   echo "Congratulations! You are ready for the training!"
