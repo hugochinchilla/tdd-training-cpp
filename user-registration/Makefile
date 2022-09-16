@@ -1,8 +1,12 @@
 default: docker-run
 
-docker-build:
-	docker build . -t codiumteam/tdd-training-cpp:user-registration
+run:
+	cd build && cmake ..
+	cd build && cmake --build .
+	./build/test/user_registration_test
+
+clean:
+	rm -rf build/*
+
 docker-run:
-	docker run -v ${PWD}:/opt/project -w /opt/project codiumteam/tdd-training-cpp:user-registration ./run-once.sh
-docker-windows-run:
-	docker run -v %cd%:/opt/project -w /opt/project codiumteam/tdd-training-cpp:user-registration ./run-once.sh
+	docker run -v ${PWD}:/codium codiumteam/tdd-training-cpp make run

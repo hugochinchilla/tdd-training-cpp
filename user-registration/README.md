@@ -54,6 +54,4 @@ Stub usage:
         .WillRepeatedly(Return(now));
 
 ## Authors
-Luis Rovirosa [@luisrovirosa](https://www.twitter.com/luisrovirosa)
-
-Jordi Anguela [@jordianguela](https://www.twitter.com/jordianguela)
+Codium [@codiumteam](https://www.twitter.com/codiumteam)

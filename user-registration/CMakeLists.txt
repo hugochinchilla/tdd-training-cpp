@@ -1,10 +1,9 @@
-cmake_minimum_required(VERSION 3.15)
-project(print_date)
+cmake_minimum_required(VERSION 3.18)
+project(user_registration)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(.)
+include_directories(src)
 
-add_executable(print_date
-        Main.cpp
-        )
+add_subdirectory(src)
+add_subdirectory(test)

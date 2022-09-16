@@ -5,8 +5,8 @@ using ::testing::Return;
 using ::testing::_; // Matcher for parameters
 
 
-TEST(UserRegistrationTest, RenameMe) {
-
+TEST(UserRegistrationTest, ThisIsTheTestNamePleaseChangeMe) {
+    EXPECT_EQ("foo", "foo");
 }
 
 int main(int argc, char **argv) {
