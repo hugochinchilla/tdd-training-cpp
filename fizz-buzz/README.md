@@ -13,6 +13,9 @@ So of course in order to avoid embarrassment in front of your whole class, you h
 - For the multiples of five returns "Buzz"
 - For the multiples of fifteen returns "FizzBuzz"
 
+## Run the tests
+
+Use make or read the [Makefile](./Makefile)
 
 # Sample output
 
