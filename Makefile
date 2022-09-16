@@ -1,10 +1,8 @@
-KATA_DIRECTORIES := $(wildcard */)
-.PHONY: docker-build docker-build-$(KATA_DIRECTORIES) docker-push docker-remove-images
-docker-build: docker-build-$(KATA_DIRECTORIES)
+.PHONY: docker-build
+docker-build:
+	docker build . -t codiumteam/tdd-training-cpp
 
-docker-build-$(KATA_DIRECTORIES):
-	cd $(subst docker-build-,,$@) && make docker-build
-
+.PHONY: docker-push
 docker-push:
 	docker push codiumteam/tdd-training-cpp --all-tags
 
