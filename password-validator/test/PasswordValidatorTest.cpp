@@ -2,10 +2,9 @@
 
 #include "PasswordValidator.h"
 
-TEST(PasswordValidatorTest, TheTestName) {
+TEST(PasswordValidatorTest, ThisIsTheTestNamePleaseChangeMe) {
     PasswordValidator passwordValidator;
 
-
-    EXPECT_EQ("foo", "foo");
+    EXPECT_EQ(true, true);
 }
 
