@@ -1,3 +1,6 @@
 .idea
 *.a
 *.o
+lib/
+cmake-build-debug
+build
