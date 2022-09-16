@@ -16,24 +16,10 @@ Be able to test printCurrentDate function without changing the method signature.
 
 ## Run the tests
 
-**Docker**
-Generate the docker image
-
-    make docker-build
-
-on **Linux and Mac**
-
-    make docker-run
-
-on **Windows**
-
-    docker build . -t gcc-googletest
-
-    docker run -v ${PWD}:/opt/project -w /opt/project gcc-googletest ./run-once.sh
-    
+Use make or read the [Makefile](./Makefile)
     
 ## Tools
-[gMock](https://github.com/google/googletest/blob/master/googlemock/docs/for_dummies.md)
+[gMock](https://google.github.io/googletest/gmock_cheat_sheet.html)
 
 ### Example of Mock in GoogleTest (C++)
 

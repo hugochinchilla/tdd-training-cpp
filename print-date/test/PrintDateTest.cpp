@@ -1,15 +1,15 @@
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
-#include "lib/Calendar.h"
-#include "lib/Printer.h"
-#include <lib/PrintDate.h>
+#include "Calendar.h"
+#include "Printer.h"
+#include "PrintDate.h"
 
 using ::testing::Return;
 using ::testing::_; // Matcher for parameters
 
 
-TEST(PrintDateTest, PrintCurrentDate) {
-    // see https://github.com/google/googletest/blob/master/googlemock/docs/ForDummies.md
+TEST(PrintDateTest, ThisIsTheTestNamePleaseChangeMe) {
+    // https://google.github.io/googletest/gmock_cheat_sheet.html
 
     //PrintDate printDate(calendar, printer);
 

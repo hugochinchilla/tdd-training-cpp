@@ -1,7 +1,9 @@
 default: docker-run
 
-docker-build:
-	docker build . -t codiumteam/tdd-training-cpp:print-date
+run:
+	cd build && cmake ..
+	cd build && cmake --build .
+	./build/test/print_date_test
 
 docker-run:
-	docker run -v ${PWD}:/opt/project -w /opt/project codiumteam/tdd-training-cpp:print-date ./run-once.sh
+	docker run -v ${PWD}:/codium codiumteam/tdd-training-cpp make run
