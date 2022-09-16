@@ -3,7 +3,7 @@ default: docker-run
 run-tests:
 	cd build && cmake ..
 	cd build && cmake --build .
-	./build/tst/coffee_machine_tst
+	./build/test/coffee_machine_test
 
 docker-build:
 	docker build . -t codiumteam/tdd-training-cpp:coffee-machine
