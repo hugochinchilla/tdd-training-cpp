@@ -5,9 +5,6 @@ run-tests:
 	cd build && cmake --build .
 	./build/tst/coffee_machine_tst
 
-download-deps:
-	git clone https://github.com/google/googletest lib/googletest
-
 docker-build:
 	docker build . -t codiumteam/tdd-training-cpp:coffee-machine
 

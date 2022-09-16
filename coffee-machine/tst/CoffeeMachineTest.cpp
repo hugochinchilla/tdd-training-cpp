@@ -3,7 +3,7 @@
 
 
 TEST(CoffeeMachineTest, ChangeTheTestName) {
-    // see https://github.com/google/googletest/blob/master/googlemock/docs/ForDummies.md
+    // https://google.github.io/googletest/gmock_cheat_sheet.html
 
     CoffeeMachine coffeeMachine;
 
