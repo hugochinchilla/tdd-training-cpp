@@ -6,7 +6,7 @@
 
 class DrinkMaker {
 public:
-    void execute(std::string command);
+    virtual void execute(std::string command) = 0;
 };
 
 
