@@ -5,7 +5,7 @@ using ::testing::Return;
 using ::testing::_; // Matcher for parameters
 
 
-TEST(UserRegistrationTest, ThisIsTheTestNamePleaseChangeMe) {
+TEST(UserRegistrationTest, this_is_the_test_name_please_change_me) {
     EXPECT_EQ("foo", "foo");
 }
 

@@ -8,7 +8,7 @@ using ::testing::Return;
 using ::testing::_; // Matcher for parameters
 
 
-TEST(PrintDateTest, ThisIsTheTestNamePleaseChangeMe) {
+TEST(PrintDateTest, this_is_the_test_name_please_change_me) {
     // https://google.github.io/googletest/gmock_cheat_sheet.html
 
     //PrintDate printDate(calendar, printer);

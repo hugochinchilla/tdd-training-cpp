@@ -3,7 +3,7 @@
 #include "CoffeeMachine.h"
 
 
-TEST(CoffeeMachineTest, ChangeTheTestName) {
+TEST(CoffeeMachineTest, change_the_test_name) {
     // https://google.github.io/googletest/gmock_cheat_sheet.html
 
     CoffeeMachine coffeeMachine;
